@@ -5,19 +5,19 @@ import type * as Preset from "@docusaurus/preset-classic";
 const config: Config = {
   title: "Warbler Documentation",
   tagline:
-    "Documentation website for Warbler - a web application for asipring music listeners. Built in Northwestern University's technological innovations for inclusive learning and teaching research lab. ",
+    "Documentation website for Warbler - a web application for aspiring music listeners. Built in Northwestern University's technological innovations for inclusive learning and teaching research lab.",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
-  url: "https://github.com/MusicNU/warbler-documentation-website",
+  url: "https://musicnu.github.io",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: "/",
+  baseUrl: "/warbler-documentation-website/",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: "MusicNU", // Usually your GitHub org/user name.
-  projectName: "warbler-documentation-website.github.io", // Usually your repo name.
+  projectName: "warbler-documentation-website", // Usually your repo name.
   trailingSlash: false,
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
