@@ -2,46 +2,80 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# MusicNU Project Overview
 
-Let's discover **Docusaurus in less than 5 minutes**.
+Let's explore **MusicNU in just a few minutes**.
 
 ## Getting Started
 
-Get started by **creating a new site**.
+Get started by **setting up the MusicNU development environment**.
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+Or **explore MusicNU features** to see how it enhances musicians' practice sessions.
 
-### What you'll need
+### What You'll Need
 
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+- [Node.js](https://nodejs.org/en/download/) version 18.0 or above
+  - When installing Node.js, select all recommended checkboxes for dependencies.
+- [AWS CLI](https://aws.amazon.com/cli/) for managing cloud resources
+- **GitHub Account** for code collaboration and version control
 
-## Generate a new site
+## Setting Up Your Development Environment
 
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
-```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
+Begin by cloning the MusicNU repository and installing dependencies:
 
 ```bash
-cd my-website
-npm run start
+git clone https://github.com/yourusername/musicnu.git
+cd musicnu
+npm install
 ```
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+### Configuring AWS and Vercel
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
+For core infrastructure, configure your AWS account with S3 and DynamoDB services. Vercel will be used for frontend deployment.
 
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+1. **AWS CLI Setup**: Ensure you have access to S3 and DynamoDB.
+2. **Vercel Deployment**: Connect the MusicNU repository to Vercel for automatic deployment.
+
+## Running MusicNU Locally
+
+After configuring, start the local development server:
+
+```bash
+npm run dev
+```
+
+This command launches a local server so you can view the site at [http://localhost:3000/](http://localhost:3000/).
+
+Make changes to `src/pages` or `src/components` to customize MusicNU. The site **reloads automatically** with each change.
+
+## Key Features
+
+- **Sheet Music Upload**: Upload PDFs or MusicXML files for analysis
+- **Performance Feedback**: Receive feedback on rhythm, pitch, and dynamics
+- **Anonymous Access**: New users can try core features without an account
+- **Real-Time Feedback**: Fast response time for in-session feedback
+
+## Project Goals
+
+The primary objective of MusicNU is to give musicians accessible, immediate feedback during practice. By integrating feedback on dynamics, rhythm, and accuracy, MusicNU reduces the need for live instructor feedback, enhancing solo practice efficiency.
+
+## Deployment
+
+MusicNU is deployed on **Vercel**, with core services on **AWS**. The setup uses **GitHub Actions** for continuous integration.
+
+### Commands Overview
+
+To start developing and deploying with MusicNU, here are some key commands:
+
+```bash
+# Start local development
+npm run dev
+
+# Build for production
+npm run build
+
+# Deploy to Vercel (linked project)
+vercel --prod
+```
+
+Happy practicing with **MusicNU**!
