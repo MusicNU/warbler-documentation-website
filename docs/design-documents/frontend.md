@@ -2,7 +2,7 @@
 
 ## Document Owners
 
-- Frontend Lead: [Ethan Pineda](EthanPineda2025@u.northwestern.edu)
+- Frontend Lead: [Ethan Pineda](mailto:EthanPineda2025@u.northwestern.edu)
 - UI/UX Designer: Everyone on MusicNU
 
 ## Document Status
