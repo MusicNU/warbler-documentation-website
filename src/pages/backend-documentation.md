@@ -65,6 +65,12 @@ Cons:
         - Test processing on 10 minute audio files
         - Test processing on multi page PDFs
 
+Files will be stored in S3 for 5 years. Since we are not expecting much traffic on the website during development, this should not pose a cost issue.
+
+Lambda logs will be stored in a cloudwatch metrics store. Cloudwatch was chosen because it is easily configured and added to Lambda functions.
+
+When the Lambda function fails, an error message will be returned to the client depending on what error occurred (malformed pdf, server error, etc.). The client will be responsible for retrying where appropriate. Lambda failures will be recorded in the cloudwatch metrics store.
+
 ## Serverful
 ![Serverful Diagram](../../static/img/serverful-diagram.png)
 ![Serverful UML](../../static/img/serverful-uml.png)
@@ -91,6 +97,8 @@ Cons:
     - Additional API + Lambda for parser_checker
     - Additional job status updates in Dynamo for PDFs and recordings
 - More API requests
+
+The complexity of implementing asynchronous design would outweigh the minor pros they come with. In addition, implementing asynchronous design through either polling or websockets would require this increased complexity.
 
 
 # DynamoDB Schema
